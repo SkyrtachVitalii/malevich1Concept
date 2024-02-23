@@ -17,19 +17,62 @@
 </head>
 
 <body>
+
   <header>
-    <section class="header-img" style="background-image: url('./images/background.jpg');">
-      <a href="#"><img class="logo logo__header" src="./images/logo.png" alt="logo"></a>
-      <div class="container">
-        <nav class="main-menu">
-          <ul class="main-menu__nav">
-            <li class="main-menu__item"><a href="#kitchen">Кухня</a></li>
-            <li class="main-menu__item"><a href="#bar">Бар</a></li>
-            <li class="main-menu__item"><a href="#contacts">Контакти</a></li>
-          </ul>
-        </nav>
+    <div class="container">
+      <div class="header">
+        <div class="header__item header__item--left">
+          <div class="header__box">
+            <div class="address">
+              <img src="./images/address-icon.png" alt="address-icon" class="address__icon icon">
+              <a href="#" class="address__link">м. Конотоп, вул. Лазаревського, 12</a>
+            </div>
+            <div class="phone">
+              <img src="./images/phone-icon.png" alt="phone-icon" class="phone__icon icon">
+              <a href="tel:+380980558286" class="phone__link"> +380(98) 055 8286</a>
+            </div>
+          </div>
+          <div class="header__box">
+            <nav class="main-menu">
+              <ul class="main-menu__list">
+                <li class="main-menu__item"><a href="#kitchen" class="main-menu__link">МЕНЮ</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link">КОНТАКТИ</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__item logo">
+          <a href="#" class="logo__link"><img src="./images/logo.png" alt="logo__img" class="logo__img"></a>
+        </div>
+        <div class="header__item header__item--right">
+          <div class="header__box header__box--right">
+            <div class="inline-b">
+              <div class="lang">
+                <div class="lang__text">UA</div>
+                <div class="lang__switcher"><img src="./images/lang-switcher.png" alt="lang-switcher"
+                    class="lang__switcher__img"></div>
+              </div>
+            </div>
+            <div class="inline-b">
+              <div class="work-time">
+                <img src="./images/clock-icon.png" alt="work-time" class="work-time__icon icon">
+                <p class="work-time__text">Пн - Нд: 10:00–23:00</p>
+              </div>
+            </div>
+            <div class="search">
+              <div class="search__box"></div>
+              <div class="search__icon"><img src="./images/search.png" alt="search__img" class="search__icon icon">
+              </div>
+            </div>
+          </div>
+          <div class="header__box">
+            <!-- пустий блок для майбутнього меню -->
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+    <div class="header__banner" style="background-image: url('./images/background.jpg'); ">
+    </div>
   </header>
 
   <section>
@@ -208,29 +251,34 @@
   </section>
 
   <footer>
-    <div id="contacts"></div>
-    <div class="wpapper">
-      <div class="container f">
-        <div class="f__item">
-          <a href="#"><img class="logo" src="./images/logo.png" alt="logo"></a>
-        </div>
-        <div class="f__item">
-          <img class="icon" src="./images/address-icon.png" alt="icon">
-          <a class="icon-m-l" href="https://maps.app.goo.gl/ufsKVSb9YL5sYVVr7" target="_blank"> Конотоп, вулиця
-            Лазаревського, 12</a>
-        </div>
-        <div class="f__item">
-          <img class="icon" src="./images/phone-icon.png" alt="icon">
-          <a class="icon-m-l" href="tel:+380980558286">+380(98) 055 8286</a>
-        </div>
-        <div class="f__item">
-          <img class="icon" src="./images/clock-icon.png" alt="icon">
-          <span class="icon-m-l"> Пн-Нд: з 10:00 до 23:00</span>
+    <div class="footer">
+      <div class="footer__box">
+        <div class="logo">
+          <a href="#" class="logo__link"><img src="./images/logo.png" alt="logo__img" class="logo__img"></a>
         </div>
       </div>
+      <div class="footer__box">
+        <h3 class="footer__heading">ДЛЯ КЛІЄНТІВ</h3>
+        <ul class="footer__nav">
+          <li class="footer__nav__item"><a href="#kitchen" class="footer__nav__link">Меню</a></li>
+          <li class="footer__nav__item"><a href="#" class="footer__nav__link">Контакти</a></li>
+          <li class="footer__nav__item"><a href="#" class="footer__nav__link">Графік роботи</a></li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <h3 class="footer__heading">НА КАРТІ</h3>
+        <iframe class="footer__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d953.8186855884094!2d33.2127459487428!3d51.24060989587115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412a4943fb786773%3A0x72a41db0629c0668!2sCandy%20hoys!5e0!3m2!1suk!2sua!4v1708701349253!5m2!1suk!2sua"
+          width="240" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="footer__mapLink" href="https://maps.app.goo.gl/TZLkMNFFQmii3A2QA">
+          <img src="./images/route.png" alt="mapImg" class="footer__mapImg">
+          Отримати розташування
+        </a>
+      </div>
     </div>
-    <div class="copyright">© Malevich 2024</div>
   </footer>
+
 </body>
 
 </html>
