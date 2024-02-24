@@ -173,7 +173,6 @@ a {
 .content {
   &__header {
     text-align: center;
-    text-decoration: underline;
     text-transform: uppercase;
   }
   &__body {
@@ -262,6 +261,9 @@ a {
   }
 }
 
+.breadcrumb {
+}
+
 @media screen and (max-width: 1220px) {
   .header {
     padding: 0;
@@ -284,6 +286,11 @@ a {
     position: absolute;
     top: 50%;
     right: 1%;
+  }
+  .header {
+    &__box:first-child {
+      border-bottom: none;
+    }
   }
 }
 
