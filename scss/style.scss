@@ -74,6 +74,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 15px 0;
+    position: relative;
     &--right {
       justify-content: flex-start;
       position: relative;
@@ -125,6 +126,7 @@ a {
 }
 
 .lang {
+  // display: none;
   display: flex;
   justify-content: flex-start;
   &__switcher {
@@ -158,9 +160,14 @@ a {
 }
 
 .search {
+  // display: none;
   position: absolute;
   right: 0;
   top: 36%;
+}
+
+.burger-menu {
+  display: none;
 }
 
 .content {
@@ -197,12 +204,18 @@ a {
   }
   &__spec {
     font-size: 14px;
+    &::after {
+      content: " г.";
+    }
   }
   &__price {
     position: absolute;
     top: 28px;
     right: 0;
     font-size: 18px;
+    &::after {
+      content: " грн";
+    }
   }
 }
 
@@ -210,6 +223,9 @@ a {
   padding: 23px 25px;
   display: flex;
   justify-content: center;
+  & * .logo__img {
+    margin: 0;
+  }
   &__box {
     max-width: 450px;
     width: 33%;
@@ -238,7 +254,6 @@ a {
     display: inline-block;
     padding: 16px;
     border-radius: 8px;
-    border: 2px;
     border: 1px solid #fff;
   }
   &__mapImg {
@@ -247,9 +262,58 @@ a {
   }
 }
 
+@media screen and (max-width: 1220px) {
+  .header {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .address,
+  .phone,
+  .lang,
+  .work-time {
+    display: none;
+  }
+  .search {
+    right: 15%;
+    top: 170%;
+  }
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .content {
     margin-top: 85px;
+  }
+  .header__banner {
+    height: 150px;
+  }
+  .search {
+    right: 20%;
+  }
+
+  .footer {
+    padding: 23px 10px;
+    &__box {
+      max-width: 450px;
+      width: 33%;
+      padding: 10px 10px;
+    }
+    &__nav {
+      &__item {
+        padding: 0;
+      }
+    }
+    &__mapLink {
+      padding: 7px;
+      border: 1px solid #fff;
+    }
   }
 }
 
@@ -257,7 +321,6 @@ a {
   .container {
     width: 100%;
   }
-
   .content {
     margin-top: 75px;
     &__body {
@@ -267,16 +330,65 @@ a {
       width: 100%;
     }
   }
+  .search {
+    right: 30%;
+  }
+  .footer {
+    padding: 23px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    &__box {
+      width: 100%;
+      padding: 5px 40px;
+      &:first-child {
+        border-right: none;
+      }
+      &:last-child {
+        border-left: none;
+      }
+    }
+    &__heading {
+      text-transform: uppercase;
+      border-bottom: 1px solid #ffdb01;
+      text-align: center;
+    }
+    &__nav {
+      margin: 10px 0;
+      &__item {
+        padding: 10px 0;
+        margin: 0;
+      }
+    }
+    &__map {
+      margin: 10px 0;
+      width: 100%;
+    }
+    &__mapLink {
+      padding: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: 555px) {
   .content {
     margin-top: 55px;
   }
+  .main-menu__item:nth-child(2) {
+    display: none;
+  }
+  .header__banner {
+    height: 100px;
+  }
+  .search {
+    right: 35%;
+  }
 }
 
 @media screen and (max-width: 455px) {
   .content {
     margin-top: 35px;
+  }
+  .search {
+    right: 50%;
   }
 }
