@@ -199,6 +199,7 @@ h6 {
   &__header {
     text-align: center;
     text-transform: uppercase;
+    margin-top: 20px;
   }
   &__body {
     margin-top: 20px;
@@ -222,9 +223,13 @@ h6 {
   margin-bottom: 10px;
   &__title {
     font-size: 18px;
+    width: 80%;
   }
   &__descr {
     font-size: 12px;
+    width: 80%;
+    display: block;
+    // max-width: 600px;
   }
   &__spec {
     font-size: 14px;
@@ -284,6 +289,7 @@ h6 {
   &__mapImg {
     width: 18px;
     height: 14px;
+    margin-right: 5px;
   }
 }
 
@@ -398,9 +404,6 @@ h6 {
 }
 
 @media screen and (max-width: 992px) {
-  .content {
-    margin-top: 85px;
-  }
   .header__banner {
     height: 150px;
   }
@@ -436,7 +439,6 @@ h6 {
     width: 100%;
   }
   .content {
-    margin-top: 75px;
     &__body {
       display: block;
     }
@@ -478,14 +480,67 @@ h6 {
     }
     &__mapLink {
       padding: 16px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  content: " ";
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  z-index: 1;
+}
+
+.toggle-menu {
+  appearance: none;
+
+  &:checked {
+    ~ nav {
+      transform: translateX(0);
+    }
+
+    ~ .overlay {
+      pointer-events: initial;
+      opacity: 1;
+    }
+  }
+}
+
+.mobile {
+  display: none;
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    padding: 30px;
+    &__close {
+      display: flex;
+      justify-content: end;
+      &--icon {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }
 
 @media screen and (max-width: 555px) {
-  .content {
-    margin-top: 55px;
-  }
   .main-menu__item:nth-child(2) {
     display: none;
   }
@@ -503,9 +558,6 @@ h6 {
 }
 
 @media screen and (max-width: 455px) {
-  .content {
-    margin-top: 35px;
-  }
   .search {
     right: 50%;
   }
