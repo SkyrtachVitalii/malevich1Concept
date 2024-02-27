@@ -1,5 +1,26 @@
 [
   {
+    "dishType": "БІЗНЕС-ЛАНЧ",
+    "name": "№ 1  Борщ зі сметаною, Рис з овочами, Компот",
+    "weight": "",
+    "ingridients": "",
+    "price": "100"
+  },
+  {
+    "dishType": "БІЗНЕС-ЛАНЧ",
+    "name": "№ 2  Суп з локшиною, Днеруни, Компот",
+    "weight": "",
+    "ingridients": "",
+    "price": "100"
+  },
+  {
+    "dishType": "БІЗНЕС-ЛАНЧ",
+    "name": "№ 3  Солянка класична, Тост з яйцем пашот та авокадо, Компот",
+    "weight": "",
+    "ingridients": "",
+    "price": "100"
+  },
+  {
     "dishType": "Сніданки",
     "name": "Яйця з беконом",
     "weight": "150",
@@ -684,6 +705,55 @@
     "weight": "250",
     "ingridients": "картопля, гриби, томати, перець, сезонні овочі",
     "price": "100"
+  },
+  {
+    "dishType": "Пивне меню",
+    "name": "Креветки",
+    "weight": "150",
+    "ingridients": "",
+    "price": "100"
+  },
+  {
+    "dishType": "Пивне меню",
+    "name": "Свинячі вуха",
+    "weight": "150",
+    "ingridients": "",
+    "price": "100"
+  },
+  {
+    "dishType": "Пивне меню",
+    "name": "Баварські ковбаски з гострим соусом",
+    "weight": "75",
+    "ingridients": "",
+    "price": "75"
+  },
+  {
+    "dishType": "Пивне меню",
+    "name": "Горішки",
+    "weight": "70",
+    "ingridients": "",
+    "price": "50"
+  },
+  {
+    "dishType": "Пивне меню",
+    "name": "Бастурма",
+    "weight": "50",
+    "ingridients": "",
+    "price": "75"
+  },
+  {
+    "dishType": "Пивне меню",
+    "name": "Грінки \"Малевич\"",
+    "weight": "150",
+    "ingridients": "",
+    "price": "50"
+  },
+  {
+    "dishType": "Пивне меню",
+    "name": "Сир косичка",
+    "weight": "70",
+    "ingridients": "",
+    "price": "55"
   },
   {
     "dishType": "Десерти",
