@@ -125,12 +125,73 @@ h6 {
     justify-content: center;
   }
   &__item {
-    padding: 5px 10px;
+    padding: 5px 15px 5px 10px;
     cursor: pointer;
+    position: relative;
+    margin: 0 10px;
   }
   &__link {
+    &.parent{
+      margin: 0px 10px 0 0;
+    }
+  }
+  &__arrow{
+    position: absolute;
+    top: 40%;
+    right: 0;
   }
 }
+
+.arrow{
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 7px solid #fff;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  &.active{
+    transform: rotate(180deg);
+  }
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  background-color: #0C220E;
+  padding: 10px;
+  border-color: #FFDB01;
+  border-style: solid;
+  border-width: 1px;
+  &__item{
+    display: block;
+    border-bottom: 2px solid #000;
+    padding: 5px;
+    &:last-child{
+      border: none;
+    }
+  }
+}
+
+body.mouse .main-menu {
+  &__list {
+    &>li:hover .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+body.touch {
+  & .dropdown-menu.open{
+    display: block;
+  }
+  & .arrow{
+    display: block;
+  }
+}
+
 
 .logo {
   &__link {
@@ -351,7 +412,6 @@ h6 {
 .breadcrumb-item.active {
   color: var(--bs-breadcrumb-item-active-color);
 }
-
 .contacts {
   margin-top: 32px;
   display: flex;
@@ -363,7 +423,6 @@ h6 {
     color: #000;
   }
 }
-
 .title {
   &__page {
   }
@@ -372,7 +431,6 @@ h6 {
     margin-top: 10px;
   }
 }
-
 .work-time-full {
   &__box {
     display: flex;
@@ -607,10 +665,9 @@ h6 {
   }
 }
 
-
 .btn-up {
   position: fixed;
-  background-color: #0C200D;
+  background-color: #0c200d;
   right: 5%;
   bottom: 40px;
   border-radius: 50%;
@@ -628,13 +685,13 @@ h6 {
     background-size: 100% 100%;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
   }
-&__hide {
-  display: none;
-}
+  &__hide {
+    display: none;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
   .btn-up:hover {
-    background-color: #071308; /* цвет заднего фона при наведении */
+    background-color: #071308;
   }
 }
