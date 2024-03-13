@@ -281,10 +281,12 @@ let overlay = document.querySelector(".mobile__overlay");
 if(closeMobileMenu){
   closeMobileMenu.addEventListener("click", function(){
     overlay.style.display = "none";
+    body.style.overflow = "auto";
   })
 }
 if(burger){
   burger.addEventListener("click", function(){
+    body.style.overflow = "hidden";
     overlay.style.display = "block";
   })
 }
