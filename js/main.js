@@ -261,7 +261,7 @@ let dropdownItem = document.querySelectorAll(".dropdown-menu__item");
 for (let i = 0; i < dropdownItem.length; i++){
   dropdownItem[i].addEventListener("click", function(){
     let dropdown = document.querySelector(".dropdown-menu");
-    if(dropdown.classList.contains("open")){
+    if(body.classList.contains('touch') && dropdown.classList.contains("open")){
       dropdown.classList.remove("open");
     }
   })
