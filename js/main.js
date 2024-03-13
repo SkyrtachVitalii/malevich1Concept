@@ -258,11 +258,17 @@ if(isMobile.any()){
 }
 
 let dropdownItem = document.querySelectorAll(".dropdown-menu__item");
+let indexPage = document.querySelector(".dishes");
 for (let i = 0; i < dropdownItem.length; i++){
   dropdownItem[i].addEventListener("click", function(){
     let dropdown = document.querySelector(".dropdown-menu");
     if(body.classList.contains('touch') && dropdown.classList.contains("open")){
       dropdown.classList.remove("open");
+    }
+    if(!indexPage){
+      const anchor = dropdownItem[i].firstChild.attributes[0].value
+      console.log(anchor)
+      window.location.href = `../index.html${anchor}`;
     }
   })
 }
