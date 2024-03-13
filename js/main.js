@@ -274,6 +274,21 @@ for (let i = 0; i < dropdownItem.length; i++){
 }
 
 
+let closeMobileMenu = document.querySelector(".mobile__menu__close");
+let burger = document.querySelector(".burger-menu");
+
+let overlay = document.querySelector(".mobile__overlay");
+if(closeMobileMenu){
+  closeMobileMenu.addEventListener("click", function(){
+    overlay.style.display = "none";
+  })
+}
+if(burger){
+  burger.addEventListener("click", function(){
+    overlay.style.display = "block";
+  })
+}
+
 
 
 

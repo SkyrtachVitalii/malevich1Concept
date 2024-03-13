@@ -156,7 +156,7 @@ h6 {
 }
 
 .dropdown-menu{
-  display: none;
+  // display: none;
   position: absolute;
   top: 30px;
   left: 5px;
@@ -166,6 +166,13 @@ h6 {
   border-style: solid;
   border-width: 1px;
   width: 250px;
+  z-index: 5;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  transition: .3s linear;
+  visibility: hidden;
+  opacity: 0;
+  overflow: auto;
   &__item{
     display: block;
     border-bottom: 2px solid #000;
@@ -181,21 +188,26 @@ h6 {
 
 body.mouse .main-menu {
   &__list {
-    &>li:hover .dropdown-menu {
+    & > li:hover .dropdown-menu {
       display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: rotateX(0deg);
     }
   }
 }
 
 body.touch {
   & .dropdown-menu.open{
-    display: block;
+    // display: block;
+    opacity: 1;
+      visibility: visible;
+      transform: rotateX(0deg);
   }
   & .arrow{
     display: block;
   }
 }
-
 
 .logo {
   &__link {
@@ -599,33 +611,41 @@ body.touch {
   z-index: 1;
 }
 
-.toggle-menu {
-  appearance: none;
-
-  &:checked {
-    ~ nav {
-      transform: translateX(0);
-    }
-
-    ~ .overlay {
-      pointer-events: initial;
-      opacity: 1;
-    }
-  }
-}
-
 .mobile {
-  display: none;
+  &__overlay{
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    content: " ";
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    z-index: 1;
+  }
+  &__open{
+    transform-origin: 0 0;
+    transform: rotateY(0deg);
+    visibility: visible;
+    opacity: 1;
+  }
   &__menu {
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
     overflow: hidden;
-    width: 400px;
+    width: 350px;
     height: 100%;
     background-color: #fff;
-    padding: 30px;
+    padding: 55px 15px 20px 15px;
+    overflow: auto;
+    transform-origin: 0 0;
+    & a {
+      color: #163D19;
+    }
     &__close {
       display: flex;
       justify-content: end;
@@ -633,6 +653,15 @@ body.touch {
         width: 40px;
         height: 40px;
       }
+    }
+    &__infoLink{
+      display: block;
+      color: #163D19;
+      padding: 5px;
+    }
+    &__arrow{
+        width: 7px;
+        height: 10px;
     }
   }
 }
@@ -646,6 +675,13 @@ body.touch {
   }
   .search {
     right: 35%;
+  }
+
+  .logo {
+    &__img {
+      width: 150px;
+      height: 68px;
+    }
   }
 
   .card {
