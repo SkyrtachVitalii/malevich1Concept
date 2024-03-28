@@ -218,7 +218,6 @@ body.touch {
   &__img {
     margin-top: 20px;
     width: 180px;
-    height: 82px;
     padding: 5px;
   }
 }
@@ -381,14 +380,21 @@ body.touch {
   &__mapLink {
     display: inline-block;
     padding: 16px;
-    border-radius: 8px;
     border: 1px solid #ffdb01;
     margin-bottom: 10px;
+    &--contactsPage{
+      color: #000;
+    }
   }
   &__mapImg {
     width: 18px;
     height: 14px;
     margin-right: 5px;
+  }
+  &__logo{
+    &--link{
+      display: block;
+    }
   }
 }
 

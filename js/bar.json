@@ -246,10 +246,10 @@
     "descr": "",
     "ingridients": "(Гренадін, куантро, абсент, шампанське)",
     "volume": "300",
-    "price_for_50ml": "35",
+    "price_for_50ml": "",
     "price_for_0_33l": "",
     "price_for_0_5l": "",
-    "price": "400"
+    "price": "130"
   },
   {
     "dishType": "Коктейлі",
@@ -1142,31 +1142,19 @@
   {
     "dishType": "Coffee",
     "subDishType": "",
-    "name": "Еспресо",
+    "name": "Еспресо з молоком",
     "descr": "",
     "ingridients": "",
     "volume": "30",
     "price_for_50ml": "",
     "price_for_0_33l": "",
     "price_for_0_5l": "",
-    "price": "30"
+    "price": "35"
   },
   {
     "dishType": "Coffee",
     "subDishType": "",
-    "name": "Еспресо",
-    "descr": "",
-    "ingridients": "",
-    "volume": "30",
-    "price_for_50ml": "",
-    "price_for_0_33l": "",
-    "price_for_0_5l": "",
-    "price": "30"
-  },
-  {
-    "dishType": "Coffee",
-    "subDishType": "",
-    "name": "Американо",
+    "name": "Американо з молоком",
     "descr": "",
     "ingridients": "",
     "volume": "120",
